@@ -11,7 +11,7 @@ from .exceptions import InvalidResponseException
 from .streams import (CurrenciesStream, ActivityTypesStream, FiltersStream, StagesStream, PipelinesStream,
                       RecentNotesStream, RecentUsersStream, RecentActivitiesStream, RecentDealsStream,
                       RecentFilesStream, RecentOrganizationsStream, RecentPersonsStream, RecentProductsStream,
-                      RecentDeleteLogsStream, DealStageChangeStream, DealsProductsStream)
+                      RecentDeleteLogsStream, DealStageChangeStream, DealsProductsStream, DealsParticipantsStream)
 
 
 logger = singer.get_logger()
@@ -34,7 +34,8 @@ class PipedriveTap(object):
         RecentProductsStream(),
         RecentDeleteLogsStream(),
         DealStageChangeStream(),
-        DealsProductsStream()
+        DealsProductsStream(),
+        DealsParticipantsStream(),
     ]
 
     def __init__(self, config, state):

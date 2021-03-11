@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "active_flag": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "add_time": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "related_item_id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "related_item_type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "related_item_data": {
+      "type": ["null", "object"],
+      "additionalProperties": true
+    },
+    "person": {
+      "type": ["null", "object"],
+      "additionalProperties": true
+    },
+    "person_id": {
+      "type": ["null", "object"],
+      "additionalProperties": true
+    },
+    "added_by_user_id": {
+      "type": ["null", "object"],
+      "additionalProperties": true
+    }
+  }
+}
